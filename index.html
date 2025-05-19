@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="image/png" href="./img/logo-cook-pre.ico" />
+</head>
+<body>
+    <header>
+  <a href="./index.html">
+    <img src="./img/logo-cook.png" alt="Logo de Galletas" />
+  </a>
+
+  <!-- Botón del menú hamburguesa -->
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Menú de navegación -->
+  <nav id="nav-menu">
+    <ul>
+      <li><a href="./pages/menu.html">Menú</a></li>
+      <li><a href="./pages/eventos.html">Eventos</a></li>
+      <li><a href="./pages/blog.html">Blog</a></li>
+      <li><a href="./pages/nosotros.html">Nosotros</a></li>
+      <li><a href="./pages/contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+  <main>
+    <section class="banner-principal">
+        <img src="./img/banner1_3024x.webp" alt="banner principal">
+    </section>
+
+    <section class="productos-mas-vendidos">
+        <h2 class="titulo-2">Lo más vendido de este universo</h2>
+        <div class="grid-productos">
+
+            <div class="producto">
+                <img src="./img/jupiter_arequipe_y_chocolate_blanco_1.webp" alt="Big Bang Cake">
+                <h3>Big Bang Cake - Torta de Chocolate</h3>
+                <p>De $39.000</p>
+                <button class="boton-compra">Comprar ahora</button>
+            </div>
+
+            <div class="producto">
+                <img src="./img/galleta-3.jpg" alt="Galleta Rellena de Arequipe">
+                <h3>Galleta Rellena de Arequipe</h3>
+                <p>De $54.000</p>
+                <button class="boton-compra">Comprar ahora</button>
+            </div>
+
+            <div class="producto">
+                <img src="./img/galleta-4.jpg" alt="Galleta Cosmo Queen">
+                <h3>Galleta Cosmo Queen</h3>
+                <p>De $58.500</p>
+                <button class="boton-compra">Comprar ahora</button>
+            </div>
+
+            <div class="producto">
+                <img src="./img/galleta-5.jpg" alt="Galleta Cosmo Rocket">
+                <h3>Galleta Cosmo Rocket</h3>
+                <p>De $54.000</p>
+                <button class="boton-compra">Comprar ahora</button>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<section class="ocasion-section">
+
+    <div class="ocasion-header">
+    <h3>Haciendo feliz a la gente</h3>
+    <h2>OCASIONES</h2>
+</div>
+<div class="ocasion-grid">
+    <!-- Columna izquierda (imagen grande) -->
+    <div class="ocasion-left">
+    <div class="ocasion-box">
+        <img src="./img/foto-favoritos-1.webp" alt="Cumpleaños">
+        <span class="ocasion-label">Cumpleaños</span>
+    </div>
+    </div>
+
+    <!-- Columna derecha (dos imágenes pequeñas) -->
+    <div class="ocasion-right">
+    <div class="ocasion-box">
+        <img src="./img/postres-3.jpg" alt="Corporativos">
+        <span class="ocasion-label">Corporativos</span>
+    </div>
+    <div class="ocasion-box">
+        <img src="./img/postres-4.jpg" alt="Románticos">
+        <span class="ocasion-label">Románticos</span>
+    </div>
+    </div>
+</div>
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column logo"></div>
+            <img style="width: 100%;" src="./img/logo-cook.png" alt="Logo de CookBakery" />
+        </div>
+        <div class="footer-column redes">
+            <div class="iconos-redes">
+                <img src="./img/icon-facebook.png" alt="Facebook" />
+                <img src="./img/icon-instagram.png" alt="Instagram" />
+                <img src="./img/icon-whatsapp.png" alt="WhatsApp" />
+            </div>
+            <p>@CookBakery</p>
+            
+        </div>
+        <div class="footer-column contacto">
+            <p><strong>Contáctanos</strong></p>
+            <p>+57 310 528 96 36</p>
+            <p>Cookbakery@gmail.com</p>
+            <p>Car. 108 #15-26</p>
+        </div>
+        <div class="footer-column pagos">
+            <p><strong>Métodos de pago</strong></p>
+            <div class="iconos-pago"></div>
+            <img src="./img/icon-pago2_360x.avif" alt="Método 1" />
+            </div>
+        </div>
+        </div>
+    </footer>
+<div id="carrito" class="carrito">
+  <h3>Carrito</h3>
+  <ul id="lista-carrito"></ul>
+</div>
+    <script>
+function toggleMenu() {
+    console.log("Toggle menu clicked");
+    const nav = document.querySelector('nav');
+    nav.classList.toggle('show');
+}
+</script>
+<script>
+document.querySelectorAll('.boton-compra').forEach((boton, index) => {
+  boton.addEventListener('click', () => {
+    const producto = boton.closest('.producto');
+    const nombre = producto.querySelector('h3')?.innerText || `Producto ${index + 1}`;
+    
+    const lista = document.getElementById('lista-carrito');
+    const item = document.createElement('li');
+    item.textContent = nombre;
+
+    lista.appendChild(item);
+  });
+});
+</script>
+</body>
+</html>

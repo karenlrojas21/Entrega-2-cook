@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contacto</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="icon" type="image/png" href="../img/logo-cook-pre.ico" />
+</head>
+<body>
+    <header>
+         <a href="../index.html">
+            <img src="./img/logo-cook.png" alt="Logo de Galletas" />
+        </a>
+    <!-- Botón del menú hamburguesa -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+    </div>
+
+        <nav>
+            <ul>
+                <li><a href="./menu.html">Menú</a></li>
+                <li><a href="./eventos.html">Eventos</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./nosotros.html">Nosotros</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+ <main>
+  <!-- Sección Contacto (Texto + Formulario) -->
+  <section class="contact-section">
+   <div class="contact-info">
+  <h5>Gracias por visitarme.</h5>
+  <h2>Contáctanos para más información</h2>
+  <p>No dudes en ponerte en contacto conmigo para cualquier consulta en el siguiente email info@eldulceobjetivo.com, rellenando el siguiente formulario o en mis redes sociales.</p>
+  
+  <!-- Imagen adicional -->
+  <img src="../img/blog-postre-1.jpg" alt="Imagen decorativa" class="contact-image" />
+</div>
+    <form class="contact-form">
+      <div class="input-row">
+        <input type="text" placeholder="Nombre" required />
+        <input type="text" placeholder="Empresa" />
+      </div>
+      <div class="input-row">
+        <input type="email" placeholder="Email" required />
+        <input type="tel" placeholder="Celular" />
+      </div>
+      <input type="text" placeholder="Categoira" class="full" />
+      <textarea placeholder="Mensaje" class="full" rows="4"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Sección Mapa + Info -->
+  <section class="location-section">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7954.201670192534!2d-74.08236092032656!3d4.57590624609579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9857e7254afb%3A0x8aa0d8c7b1dfdbde!2sCiudadela%20Parque%20La%20Roca!5e0!3m2!1ses!2sco!4v1745241846937!5m2!1ses!2sco" allowfullscreen="" loading="lazy"></iframe>
+    <div class="location-info">
+      <h5>Locación</h5>
+      <h2>Como podemos ayudarte</h2>
+      <p>Puedes escribirnos en el siguiente formulario.
+
+</p>
+      <ul>
+        <li>📍 Cra. Ejemplo #123, Bogotá</li>
+        <li>✉️ cookis-desset@gmail.com</li>
+        <li>📞 +57 314 250 850</li>
+      </ul>
+    </div>
+  </section>
+</main>
+    
+   <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column logo"></div>
+            <img style="width: 100%;" src="./img/logo-cook.png" alt="Logo de CookBakery" />
+        </div>
+        <div class="footer-column redes">
+            <div class="iconos-redes">
+                <img src="./img/icon-facebook.png" alt="Facebook" />
+                <img src="./img/icon-instagram.png" alt="Instagram" />
+                <img src="./img/icon-whatsapp.png" alt="WhatsApp" />
+            </div>
+            <p>@CookBakery</p>
+            
+        </div>
+        <div class="footer-column contacto">
+            <p><strong>Contáctanos</strong></p>
+            <p>+57 310 528 96 36</p>
+            <p>Cookbakery@gmail.com</p>
+            <p>Car. 108 #15-26</p>
+        </div>
+        <div class="footer-column pagos">
+            <p><strong>Métodos de pago</strong></p>
+            <div class="iconos-pago"></div>
+            <img src="./img/icon-pago2_360x.avif" alt="Método 1" />
+            </div>
+        </div>
+        </div>
+    </footer>
+    <script>
+function toggleMenu() {
+    console.log("Toggle menu clicked");
+    const nav = document.querySelector('nav');
+    nav.classList.toggle('show');
+}
+</script>
+</body>
+</html>

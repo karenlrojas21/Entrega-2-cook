@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="icon" type="image/png" href="../img/logo-cook-pre.ico" />
+</head>
+<body>
+     <header>
+        <a href="../index.html">
+            <img src="./img/logo-cook.png" alt="Logo de Galletas" />
+        </a>
+    <!-- Botón del menú hamburguesa -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+    </div>
+
+        <nav>
+            <ul>
+                <li><a href="./menu.html">Menú</a></li>
+                <li><a href="./eventos.html">Eventos</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./nosotros.html">Nosotros</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="banner-principal-2">
+                <img src="./img/banner-eventos-1.jpg" alt="banner-pincipal">
+        </section>
+        <section class="inspiracion">
+  <div class="intro">
+    <div class="texto">
+      <h2>Refrigerios para eventos y regalos corporativos</h2>
+      <p>Cualquier ocasión es la excusa perfecta para que los miembros de tu equipo se sientan valorados y aumenten su sentido de pertenencia. Sorpréndelos en fechas especiales con productos artesanales.
+        En las reuniones y eventos corporativos siempre necesitamos una pausa para deleitarnos. Así que te ofrecemos nuestros combos para refrigerios:
+        Nuestros productos están presentes en los principales almacenes de cadena del país, gracias a esta modalidad más de doce ciudades de Colombia pueden disfrutar de los deliciosos sabores tradicionales.
+
+Conoce los privilegios de ser un distribuidor de Pastelería Santa Elena.
+      </p>
+      <button>Ver más</button>
+    </div>
+    <div class="video">
+      <iframe width="100%" height="315" src="../img/video-postres.mp4" 
+              title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <h2 class="titulo-reseñas">Lo que dicen nuestros clientes</h2>
+  <div class="swiper-container reviews-slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide review-card">
+        <p>"Este lugar cambió mi manera de ver la repostería. ¡Delicioso!"</p>
+        <strong>- Camila Gómez</strong>
+      </div>
+      <div class="swiper-slide review-card">
+        <p>"Increíble atención y productos. Recomendado 100%."</p>
+        <strong>- Andrés Ruiz</strong>
+      </div>
+      <div class="swiper-slide review-card">
+        <p>"Las mejores galletas artesanales que he probado."</p>
+        <strong>- Marta Pérez</strong>
+      </div>
+    </div>
+  </div>
+</section>
+    </main>
+    
+   <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column logo"></div>
+            <img style="width: 100%;" src="./img/logo-cook.png" alt="Logo de CookBakery" />
+        </div>
+        <div class="footer-column redes">
+            <div class="iconos-redes">
+                <img src="./img/icon-facebook.png" alt="Facebook" />
+                <img src="./img/icon-instagram.png" alt="Instagram" />
+                <img src="./img/icon-whatsapp.png" alt="WhatsApp" />
+            </div>
+            <p>@CookBakery</p>
+            
+        </div>
+        <div class="footer-column contacto">
+            <p><strong>Contáctanos</strong></p>
+            <p>+57 310 528 96 36</p>
+            <p>Cookbakery@gmail.com</p>
+            <p>Car. 108 #15-26</p>
+        </div>
+        <div class="footer-column pagos">
+            <p><strong>Métodos de pago</strong></p>
+            <div class="iconos-pago"></div>
+            <img src="./img/icon-pago2_360x.avif" alt="Método 1" />
+            </div>
+        </div>
+        </div>
+    </footer>
+    <script>
+function toggleMenu() {
+    console.log("Toggle menu clicked");
+    const nav = document.querySelector('nav');
+    nav.classList.toggle('show');
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  new Swiper('.reviews-slider', {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      }
+    }
+  });
+</script>
+    
+</body>
+</html>
