@@ -1,0 +1,130 @@
+main {
+  .banner-principal-2 {
+    img {
+      width: 100%;
+      display: block;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  .inspiracion {
+    padding: 40px 20px;
+    text-align: center;
+
+    .intro {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      max-width: 1000px;
+      margin: 0 auto 60px;
+
+      .texto {
+        flex: 1;
+        min-width: 280px;
+        text-align: left;
+
+        h2 {
+          font-size: 2rem;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: 1rem;
+          margin-bottom: 20px;
+        }
+
+        button {
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 10px;
+          cursor: pointer;
+          background: #dc1537;
+        }
+      }
+
+      .video {
+        flex: 1;
+        min-width: 300px;
+
+        iframe {
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+
+    .titulo-reseñas {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+      color: #dc1537;
+    }
+
+    .reviews-slider {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      position: relative;
+
+      .swiper-wrapper {
+        display: flex;
+      }
+
+      .swiper-slide {
+        width: auto;
+        flex-shrink: 0;
+        margin-right: 20px;
+
+        &.review-card {
+          background: white;
+          padding: 20px;
+          border-radius: 16px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+          width: 300px;
+          height: auto;
+          text-align: left;
+
+          p {
+            margin-bottom: 10px;
+            color: #333;
+          }
+
+          strong {
+            color: #dc1537;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    .swiper-pagination {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .intro {
+      flex-direction: column;
+
+      .video,
+      .texto {
+        width: 100%;
+      }
+    }
+
+    .swiper-wrapper {
+      flex-direction: column;
+      align-items: center;
+
+      .swiper-slide {
+        width: 100% !important;
+      }
+    }
+  }
+}

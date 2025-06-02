@@ -1,0 +1,59 @@
+.clientes {
+  padding: 40px 20px;
+  background-color: #FFD6E4;
+
+  .clientes-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    img {
+      max-width: 400px;
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      flex-shrink: 0;
+    }
+
+    .clientes-texto {
+      flex: 1;
+      min-width: 280px;
+      color: #dc1537;
+
+      h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .clientes-contenido {
+      flex-direction: column;
+      text-align: center;
+
+      img {
+        max-width: 100%;
+      }
+
+      .clientes-texto {
+        h2 {
+          font-size: 20px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

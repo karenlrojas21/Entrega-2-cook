@@ -1,0 +1,95 @@
+.footer {
+  background-color: #ff9bbc;
+  color: white;
+  padding: 30px 20px;
+  position: relative;
+  top: 35px;
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .footer .footer-column.logo img {
+    width: 332px;
+    height: auto;
+}
+
+.footer .footer-column.pagos .iconos-pago img {
+    width: 278px;
+    margin: 0 5px;
+}
+
+  .footer-column {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px;
+    text-align: center;
+
+    &.logo {
+      img {
+        width: 120px;
+        height: auto;
+      }
+    }
+
+    &.redes {
+      .iconos-redes {
+        img {
+          width: 24px;
+          margin: 0 5px;
+        }
+      }
+
+      p {
+        margin: 5px 0;
+        font-size: 14px;
+      }
+    }
+
+    &.contacto {
+      p {
+        margin: 5px 0;
+        font-size: 14px;
+      }
+    }
+
+    &.pagos {
+      .iconos-pago {
+        img {
+          width: 30px;
+          margin: 0 5px;
+        }
+      }
+
+      p {
+        margin: 5px 0;
+        font-size: 14px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .footer-column {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .footer-column.logo img {
+      margin: 0 auto;
+    }
+
+    .iconos-redes img,
+    .iconos-pago img {
+      margin: 5px;
+    }
+  }
+}

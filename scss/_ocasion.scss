@@ -1,0 +1,88 @@
+.ocasion-section {
+  background-color: #ffe1eb;
+  font-family: 'Arial', sans-serif;
+  padding: 40px 20px;
+
+  .ocasion-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+
+    h3 {
+      font-size: 1.5rem;
+      color: #dc1537;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #dc1537;
+      margin: 0.2rem 0;
+    }
+  }
+
+  .ocasion-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    position: relative;
+
+    .ocasion-left,
+    .ocasion-right {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .ocasion-left {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .ocasion-right {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .ocasion-box {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        display: block;
+      }
+
+      .ocasion-label {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        background-color: white;
+        color: #dc1537;
+        font-weight: bold;
+        padding: 4px 10px;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 20px;
+
+    .ocasion-header {
+      h3, h2 {
+        position: relative;
+        right: 50px;
+      }
+    }
+
+    .ocasion-grid {
+      flex-direction: column;
+    }
+  }
+}

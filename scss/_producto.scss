@@ -1,0 +1,134 @@
+.productos-mas-vendidos {
+  padding: 40px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  .titulo-2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #dc1537;
+  }
+
+  .grid-productos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+
+    .producto {
+      background: #fff;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+
+      h3 {
+        font-size: 1.1em;
+        margin: 15px 0 5px;
+      }
+
+      p {
+        color: #333;
+        font-size: 15px;
+      }
+
+      .boton-compra {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #dc1537;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    border: none;
+    border-radius: 10px;
+  }
+}
+
+// Banner específico para productos
+.banner-principal-2 {
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+}
+
+// Slider simple
+.swiper-container.simple-slider {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  position: relative;
+
+  .swiper-slide {
+    text-align: center;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  .swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+// Responsive
+@media screen and (max-width: 768px) {
+  .productos-mas-vendidos {
+    .titulo-2 {
+      font-size: 20px;
+    }
+
+    .grid-productos {
+      grid-template-columns: 1fr;
+      gap: 20px;
+
+      .producto {
+        width: 100%;
+      }
+    }
+  }
+
+  .swiper-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .swiper-slide {
+    width: 100% !important;
+    margin-right: 20px;
+  }
+}
